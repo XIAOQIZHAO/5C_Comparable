@@ -5,14 +5,14 @@ public class Date implements Comparable{
     private int y,m,d;
     
     public int compareTo( Object otherObj){
-	if (compare(y, ((Date)otherObj).getY()) == 0){
-	    if (compare(m, ((Date)otherObj).getM()) == 0)
-		return compare(d, ((Date)otherObj).getD());
+	if (compare(y, ((Date)otherObj).y) == 0){
+	    if (compare(m, ((Date)otherObj).m) == 0)
+		return compare(d, ((Date)otherObj).d);
 	    else
-		return compare(m, ((Date)otherObj).getM());
+		return compare(m, ((Date)otherObj).m);
 	}
 	else
-	    return compare(y, ((Date)otherObj).getY());
+	    return compare(y, ((Date)otherObj).y);
     }
     
     // -------- previously-written code --------
@@ -31,17 +31,6 @@ public class Date implements Comparable{
         return String.format("%4d-%02d-%02d",y, m, d);
     }
 
-    public int getY(){
-	return y;
-    }
-    
-    public int getM(){
-	return m;
-    }
-    
-    public int getD(){
-	return d;
-    }
 
     public int compare(int var1, int var2){
 	if (var1 > var2) return 1;
