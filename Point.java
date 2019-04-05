@@ -1,13 +1,18 @@
 /**
   Represent a point, using Cartesian coordinates
  */
-public class Point{
+public class Point implements Comparable{
     private double xcor;
     private double ycor;
-    
+
+    /**
+      @return  a negative integer, zero, or a positive integer
+      depending on whether this Point is closer, 
+      equidistant, or farther than the Point referred to
+      by the parameter.
+     */
     public int compareTo( Object otherObj){
-        // Fix this. Double.compare helped me.
-        return 0; // temp: all Points are One
+	return Double.compare(distanceToOrigin(), ((Point)otherObj).distanceToOrigin());
     }
 
     // -------- previously-written code ----------
@@ -22,6 +27,10 @@ public class Point{
      */
     public String toString() {
         return "(" + xcor + "," + ycor + ")"; 
+    }
+
+    public double distanceToOrigin(){
+	return Math.sqrt(Math.pow(xcor, 2) + Math.pow(ycor, 2));
     }
 
 }
