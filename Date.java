@@ -5,6 +5,8 @@ public class Date implements Comparable{
     private int y,m,d;
     
     public int compareTo( Object otherObj){
+	return toString().compareTo(((Date)otherObj).toString());
+	/*
 	if (compare(y, ((Date)otherObj).y) == 0){
 	    if (compare(m, ((Date)otherObj).m) == 0)
 		return compare(d, ((Date)otherObj).d);
@@ -13,6 +15,7 @@ public class Date implements Comparable{
 	}
 	else
 	    return compare(y, ((Date)otherObj).y);
+	*/
     }
     
     // -------- previously-written code --------
@@ -32,9 +35,11 @@ public class Date implements Comparable{
     }
 
 
+    /*
     public int compare(int var1, int var2){
 	if (var1 > var2) return 1;
 	else if (var1 < var2) return -1;	
 	else return 0;
     }
+    */
 }
