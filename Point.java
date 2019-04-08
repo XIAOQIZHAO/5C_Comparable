@@ -12,6 +12,9 @@ public class Point implements Comparable{
       by the parameter.
      */
     public int compareTo( Object otherObj){
+	// if (this == (Point)otherObj)
+	//    return 0;
+	// calculate only x square plus y square of each Point and return Double.compare() of those
 	return Double.compare(distanceToOrigin(), ((Point)otherObj).distanceToOrigin());
     }
 
