@@ -16,6 +16,10 @@ public class Date implements Comparable{
 	else
 	    return compare(y, ((Date)otherObj).y);
 	*/
+	/*
+	  multiply y by 366, m by 31, d by 1
+	  or y by 1000, m by 100, d by 1
+	 */
     }
     
     // -------- previously-written code --------
